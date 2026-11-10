@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nota Boa | Painel</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, sans-serif; background: #f5f7fb; color: #172238; }
+    header { background: #183b65; color: white; padding: 24px; }
+    header h1 { margin: 0 0 6px; }
+    main { padding: 20px; max-width: 900px; margin: auto; }
+    .card { background: white; padding: 22px; border-radius: 14px; margin-bottom: 16px; box-shadow: 0 2px 10px #0000000d; }
+    label { display: block; margin: 14px 0 6px; font-weight: bold; }
+    input, select, textarea { width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 16px; }
+    button { background: #183b65; color: white; border: 0; padding: 14px 20px; border-radius: 9px; margin-top: 18px; font-size: 16px; }
+    .note { color: #596579; font-size: 14px; line-height: 1.5; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Nota Boa</h1>
+    <div>Painel administrativo — protótipo</div>
+  </header>
+  <main>
+    <section class="card">
+      <h2>Cadastrar material</h2>
+      <p class="note">Esta tela é uma demonstração. Ainda não salva dados nem envia arquivos.</p>
+
+      <label for="titulo">Título do material</label>
+      <input id="titulo" placeholder="Ex.: Frações — exercícios">
+
+      <label for="ano">Ano escolar</label>
+      <select id="ano">
+        <option>6º ano</option>
+        <option>7º ano</option>
+        <option>8º ano</option>
+        <option>9º ano</option>
+        <option>Ensino Médio</option>
+      </select>
+
+      <label for="conteudo">Conteúdo</label>
+      <input id="conteudo" placeholder="Ex.: Frações">
+
+      <label for="tipo">Tipo de material</label>
+      <select id="tipo">
+        <option>Plano de aula</option>
+        <option>Exercícios</option>
+        <option>Avaliação</option>
+        <option>Slides</option>
+        <option>Outro</option>
+      </select>
+
+      <label for="acesso">Acesso</label>
+      <select id="acesso">
+        <option>Gratuito</option>
+        <option>Pago</option>
+      </select>
+
+      <label for="moedas">Preço em moedas</label>
+      <input id="moedas" type="number" min="0" value="2">
+
+      <label for="arquivo">Selecionar arquivo</label>
+      <input id="arquivo" type="file" accept=".pdf,.ppt,.pptx">
+
+      <button type="button" onclick="alert('Protótipo: o cadastro será ativado após conectarmos o Supabase.')">
+        Cadastrar material
+      </button>
+    </section>
+  </main>
+</body>
+</html>
